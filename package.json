@@ -7,15 +7,15 @@
     "test": "jest",
     "lint": "eslint src",
     "pretty": "prettier --semi false --print-width 100 --single-quote --trailing-comma all --write \"src/**/*.js\"",
-    "lint-staged": {
-      "*.js": [
-        "yarn pretty",
-        "git add"
-      ]
-    },
     "precommit": "lint-staged && yarn test",
     "flow": "flow",
     "flow-stop": "flow stop"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn pretty",
+      "git add"
+    ]
   },
   "dependencies": {
     "react": "16.5.0",
