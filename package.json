@@ -7,7 +7,6 @@
     "test": "jest",
     "lint": "eslint src",
     "pretty": "prettier --semi false --print-width 100 --single-quote --trailing-comma all --write \"src/**/*.js\"",
-    "precommit": "lint-staged && yarn test",
     "flow": "flow",
     "flow-stop": "flow stop"
   },
@@ -16,6 +15,11 @@
       "yarn pretty",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && yarn test"
+    }
   },
   "dependencies": {
     "react": "16.5.0",
